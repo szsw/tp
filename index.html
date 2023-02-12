@@ -12,6 +12,7 @@
     <div class="theoplayer-container video-js theoplayer-skin vjs-16-9"></div>
     <script type="text/javascript" src="dl/THEOplayer.js"></script>
     <script>
+        var languages = ['Original', 'Arabic', 'English', 'French']
         var element = document.querySelector('.theoplayer-container');
         var player = new THEOplayer.Player(element, {
             libraryLocation: 'dl/',
@@ -24,14 +25,9 @@
             }]
         };
         player.addEventListener('readystatechange', function () {
-            console.log("A new stream has been detected.");
-            console.log(player.readyState)
-            console.log(player.audioTracks)
-            console.log(player.audioTracks.item)
-            console.log(player.audioTracks[0])
-            console.log(player.audioTracks.item[0])
-            console.log(player.audioTracks[0].label)
-            player.audioTracks[0].label = "Test"
+            for (i = 0; i < languages.length + 1; i++) {
+                player.audioTracks[i].label = languages[i]
+            }
         })
     </script>
 </body>
