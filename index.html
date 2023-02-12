@@ -26,6 +26,7 @@
         player.addEventListener('loadedmetadata', function () {
             console.log("A new stream has been detected.");
             console.log(player.audioTracks)
+            player.audioTracks[0].label = "Test"
         })
     </script>
 </body>
