@@ -25,8 +25,7 @@
         };
         player.addEventListener('loadedmetadata', function () {
             console.log("A new stream has been detected.");
-            player.removeEventListener('playing', firstplaying);
-            player.addEventListener('playing', firstplaying);
+            console.log(player.audioTracks)
         })
     </script>
 </body>
