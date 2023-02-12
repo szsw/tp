@@ -24,7 +24,7 @@
                 type: 'application/x-mpegurl'
             }]
         };
-        player.addEventListener('online', function () {
+        player.addEventListener('loadedmetadata', function () {
             for (i = 0; i < languages.length + 1; i++) {
                 player.audioTracks[i].label = languages[i]
             }
