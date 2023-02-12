@@ -23,7 +23,7 @@
                 type: 'application/x-mpegurl'
             }]
         };
-        player.addEventListener('loadedmetadata', function () {
+        player.addEventListener('loadeddata', function () {
             console.log("A new stream has been detected.");
             console.log(player.audioTracks)
             console.log(player.audioTracks.item)
