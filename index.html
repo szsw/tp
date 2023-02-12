@@ -24,13 +24,15 @@
                 type: 'application/x-mpegurl'
             }]
         };
-        try {
-            player.addEventListener('loadeddata', function () {
+        player.addEventListener('loadeddata', function () {
+            try {
+
                 for (i = 0; i < languages.length + 1; i++) {
                     player.audioTracks[i].label = languages[i]
                 }
-            })
-        } catch (e) { }
+            } catch (e) { }
+        })
+
     </script>
 </body>
 
